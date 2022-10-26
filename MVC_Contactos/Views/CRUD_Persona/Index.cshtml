@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.titulo = "Administración de personas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.titulo</h2>
+
+<a href="~/CRUD_Persona/Nuevo" class="btn btn-success">NUEVO EMPLEADO</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>PersonaId</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>EDITAR</th>
+            <th>BORRAR</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>Andrés Gómez</th>
+            <th>3005776492</th>
+            <th>andres@gmail.com</th>
+            <th><a href="/CRUD_Persona/Editar" class="btn btn-info">EDITAR</a></th>
+            <th><a href="/CRUD_Persona/Editar" class="btn btn-danger">BORRAR</a></th>
+        </tr>
+
+    </tbody>
+</table>

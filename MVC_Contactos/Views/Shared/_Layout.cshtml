@@ -24,6 +24,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Personas", "Index", "CRUD_Persona")</li>
                 </ul>
             </div>
         </div>
@@ -31,8 +32,8 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        <footer class="text-center">
+            <p>&copy; @DateTime.Now.Year - Aplicación desarrollada y soportada por Andrés Gómez</p>
         </footer>
     </div>
 
