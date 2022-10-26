@@ -1,0 +1,25 @@
+﻿@model MVC_Contactos.Models.ModeloPersona
+
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+
+<div>
+    <form method="post" action="/CRUD_Persona/Editar">
+        <input type="hidden" name="PersonaId" value="@Model.PersonaId" />
+        <br />
+        Nombre:
+        <input type="text" name="Nombre" value="@Model.Nombre" />
+        <br />
+        Telefono:
+        <input type="text" name="Telefono" value="@Model.Telefono" />
+        <br />
+        Correo:
+        <input type="text" name="Email" value="@Model.Email" />
+        <br />
+        <input type="submit" value="GUARDAR" />     <a class="btn btn-info" href="/CRUD_Persona">Retornar</a>
+    </form>
+</div>

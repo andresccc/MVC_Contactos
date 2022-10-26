@@ -46,5 +46,43 @@ namespace MVC_Contactos.Controllers
             return RedirectToAction("Index");
         }
 
+        /*-------------------------EDITAR--------------------------------*/
+        //GET: CRUD_Persona editar
+        public ActionResult Editar(int id = 0)
+        {
+            var Persona = ListaPersonas.Single(m => m.PersonaId == id);
+            return View(Persona);
+
+        }
+
+        //GET: CRUD_Persona editar recibe datos a modificar
+        [HttpPost]
+        public ActionResult Editar(FormCollection collection)
+        {
+            var persona = ListaPersonas.Single(m => m.PersonaId == int.Parse(collection["PersonaId"]));
+            if (TryUpdateModel(persona))
+            {
+                persona.Nombre = collection["Nombre"];
+                persona.Telefono = collection["Telefono"];
+                persona.Email = collection["Email"];
+            }
+            return RedirectToAction("Index");
+        }
+
+        /*-------------------------BORRAR--------------------------------*/
+        public ActionResult Borrar(int id = 0)
+        {
+            var Persona = ListaPersonas.Single(m => m.PersonaId == id);
+            return View(Persona);
+
+        }
+
+        [HttpPost]
+        public ActionResult BorrarConfirmado(FormCollection collection)
+        {
+            var persona = ListaPersonas.Single(m => m.PersonaId == int.Parse(collection["PersonaId"]));
+            ListaPersonas.Remove(persona);
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -28,8 +28,8 @@
             <th>@Html.DisplayFor(modelItem => item.Telefono)</th>
             <th>@Html.DisplayFor(modelItem => item.Email)</th>
             <th>
-                <a href="/CRUD_Persona/Editar" class="btn btn-info">EDITAR</a>
-                <a href="/CRUD_Persona/Editar" class="btn btn-danger">BORRAR</a>
+                <a href="/CRUD_Persona/Editar/@item.PersonaId" class="btn btn-info">EDITAR</a>
+                <a href="/CRUD_Persona/Borrar//@item.PersonaId" class="btn btn-danger">BORRAR</a>
             </th>
         </tr>
          }

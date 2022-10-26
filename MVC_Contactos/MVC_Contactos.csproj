@@ -166,6 +166,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\CRUD_Persona\Index.cshtml" />
     <Content Include="Views\CRUD_Persona\Nuevo.cshtml" />
+    <Content Include="Views\CRUD_Persona\Editar.cshtml" />
+    <Content Include="Views\CRUD_Persona\Borrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
