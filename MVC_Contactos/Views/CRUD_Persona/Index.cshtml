@@ -1,4 +1,5 @@
-﻿
+﻿@model List<MVC_Contactos.Models.ModeloPersona>
+
 @{
     ViewBag.titulo = "Administración de personas";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -15,19 +16,22 @@
             <th>Nombre</th>
             <th>Telefono</th>
             <th>Email</th>
-            <th>EDITAR</th>
-            <th>BORRAR</th>
+            <th>OPCIONES</th>
         </tr>
     </thead>
     <tbody>
+         @foreach (var item in Model) 
+         {
         <tr>
-            <th>1</th>
-            <th>Andrés Gómez</th>
-            <th>3005776492</th>
-            <th>andres@gmail.com</th>
-            <th><a href="/CRUD_Persona/Editar" class="btn btn-info">EDITAR</a></th>
-            <th><a href="/CRUD_Persona/Editar" class="btn btn-danger">BORRAR</a></th>
+            <th>@Html.DisplayFor(modelItem => item.PersonaId)</th>
+            <th>@Html.DisplayFor(modelItem => item.Nombre)</th>
+            <th>@Html.DisplayFor(modelItem => item.Telefono)</th>
+            <th>@Html.DisplayFor(modelItem => item.Email)</th>
+            <th>
+                <a href="/CRUD_Persona/Editar" class="btn btn-info">EDITAR</a>
+                <a href="/CRUD_Persona/Editar" class="btn btn-danger">BORRAR</a>
+            </th>
         </tr>
-
+         }
     </tbody>
 </table>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Nuevo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nuevo</h2>
+
+<div>
+    <form method="post" action="/CRUD_Persona/Nuevo">
+        <input type="hidden" name="PersonaId" value="" />
+        <br />
+        Nombre:
+        <input type="text" name="Nombre" value="" />
+        <br />
+        Telefono:
+        <input type="text" name="Telefono" value="" />
+        <br />
+        Correo:
+        <input type="text" name="Email" value="" />
+        <br />
+        <input type="submit" value="GUARDAR" />     <a class="btn btn-info" href="/CRUD_Persona">Retornar</a>
+    </form>
+</div>
